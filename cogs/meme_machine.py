@@ -12,7 +12,7 @@ class Meme(commands.Cog):
         if message.author == self.bot.user: # Prevents bot from replying to itself
             return
         
-        if ("big shoe") in message.content: # big shoe lmfao
+        if ("big shoe") in (message.content).lower(): # big shoe lmfao
             await message.channel.send("https://tenor.com/bC1Ll.gif")
         
 def setup(bot):
