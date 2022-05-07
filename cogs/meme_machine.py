@@ -18,7 +18,7 @@ class Meme(commands.Cog):
             await message.channel.send("https://tenor.com/bC1Ll.gif")
         
         elif ("meme") in (message.content).lower():
-            await message.channel.send(random.choice(links))
+            await message.channel.send(random.choice(links["memes"]))
         
 def setup(bot):
     bot.add_cog(Meme(bot))
