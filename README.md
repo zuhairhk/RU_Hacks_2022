@@ -33,3 +33,16 @@ With Digitized Daniel, Google searches are possible right in Discord!
 /search
 ```
 Is used to call the function, followed by whatever you'd like to search. Digitized Daniel will return the first result from Google. 
+
+## **Pomodoro Timer**
+Having trouble focusing when you're trying to study? The *Pomodoro Technique* is a method of staying focused by working for an interval of time, then taking a break for a smaller interval, and repeating this process. This increases productivity and prevents burnout.
+
+ Digitized Daniel has a function to set a timer and keep track of how much time has elapsed, through Discord. 
+ ```
+ $start x y
+ ```
+ Is the command to start a Pomodoro timer, where *x* is the study time interval and *y* is the break time interval.
+ ```
+ $time
+ ```
+ Displays how much time is left in the current study/break interval.
