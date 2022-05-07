@@ -26,3 +26,10 @@ Is used to toggle between different modes for the light which change the lights 
 *Scene*: Allows the user to create conditions that control the bulb, such as external brightness 
 
 *Music*: Changes colour to synchronize with music playing
+
+## **Search Function**
+With Digitized Daniel, Google searches are possible right in Discord!
+```
+/search
+```
+Is used to call the function, followed by whatever you'd like to search. Digitized Daniel will return the first result from Google. 
