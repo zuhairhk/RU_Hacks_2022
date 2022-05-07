@@ -10,6 +10,8 @@ from cogs import light_controller, search_func
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
+# Bot Invite Link: https://discord.com/api/oauth2/authorize?client_id=972281781564887052&permissions=8&scope=bot%20applications.commands
+
 intents = Intents.all()
 bot = commands.Bot(command_prefix = "$", intents = intents)
 
