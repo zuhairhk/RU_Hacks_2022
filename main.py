@@ -5,7 +5,6 @@ import nextcord
 from nextcord.ext import commands
 from nextcord.abc import GuildChannel
 from nextcord import Intents, Interaction, SlashOption, Member, ChannelType
-
 from cogs import light_controller
 
 load_dotenv()

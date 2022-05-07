@@ -35,7 +35,7 @@ class LightController(commands.Cog):
 def setup(bot):
     bot.add_cog(LightController(bot))
 
-# 
+# State of Light Function
 def state(mode):
         if mode.lower() == 'on':
             state = True
@@ -44,7 +44,7 @@ def state(mode):
         commands = {'commands': [{'code': 'switch_led', 'value': state}]}
         openapi.post(f'/v1.0/iot-03/devices/{LIGHTBULB_DEVICE_ID}/commands', commands)
 
-# 
+# Colour Set Function
 def colourSet(colour):
     colors = {
             'red' : 0,
@@ -58,7 +58,7 @@ def colourSet(colour):
     commands = {'commands': [{ 'code': 'colour_data_v2', 'value': {'h': colors[colour], 's': 1000, 'v': 1000} }]}
     openapi.post(f'/v1.0/iot-03/devices/{LIGHTBULB_DEVICE_ID}/commands', commands)
 
-# 
+# Light Mode Set Function
 def lightMode(mode):
     commands = {'commands': [{'code': 'work_mode', 'value': mode}] }
     openapi.post(f'/v1.0/iot-03/devices/{LIGHTBULB_DEVICE_ID}/commands', commands)
