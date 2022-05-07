@@ -47,5 +47,3 @@ Having trouble focusing when you're trying to study? The *Pomodoro Technique* is
  $time
  ```
  Displays how much time is left in the current study/break interval.
-=======
->>>>>>> 3b1ed7d57775b123b9fb633ca49bc5966309e8fb
