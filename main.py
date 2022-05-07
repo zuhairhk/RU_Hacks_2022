@@ -5,16 +5,6 @@ import nextcord
 from nextcord.ext import commands
 from nextcord import Intents
 
-from tuya_connector import TuyaOpenAPI
-# env variables
-ACCESS_ID = 'uuphqcm9b7tercbdvdr5'
-ACCESS_KEY = '894148e6d6ba4d05905a978c9d422b19'
-API_ENDPOINT = 'https://openapi-ueaz.tuyaus.com'
-LIGHTBULB_DEVICE_ID = '10063573bcddc2a1c466'
-# CONNECTION
-openapi = TuyaOpenAPI(API_ENDPOINT, ACCESS_ID, ACCESS_KEY)
-openapi.connect()
-
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 

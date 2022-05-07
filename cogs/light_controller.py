@@ -8,6 +8,7 @@ ACCESS_ID = os.environ['ACCESS_ID']
 ACCESS_KEY = os.environ['ACCESS_KEY']
 API_ENDPOINT = os.environ['API_ENDPOINT']
 LIGHTBULB_DEVICE_ID = os.environ['LIGHTBULB_DEVICE_ID']
+
 # CONNECTION
 openapi = TuyaOpenAPI(API_ENDPOINT, ACCESS_ID, ACCESS_KEY)
 openapi.connect()
