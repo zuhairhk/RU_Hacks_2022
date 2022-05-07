@@ -19,15 +19,15 @@ class LightController(commands.Cog):
     def __init__(self, bot : Client):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(name='light_state', help='Changes state of bulb (On/Off)')
     async def light_state(self, ctx, mode):
         state(mode=mode)
     
-    @commands.command()
+    @commands.command(name='set_colour', help='Sets Colour: Red, Orange, Yellow, Green, Cyan, Blue, Pink')
     async def set_colour(self, ctx, colour):
         colourSet(colour=colour)
     
-    @commands.command()
+    @commands.command(name='set_mode', help='Sets mode: White, Colour, Scence, Music')
     async def set_mode(self, ctx, mode):
         colourSet(mode=mode)
 

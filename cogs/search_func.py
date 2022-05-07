@@ -10,10 +10,10 @@ class GoogleScraper(commands.Cog):
     def __init__(self, bot : Client):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(name='ask', help='Ask any question! (Use slash command `/search`)')
     async def ask(self, ctx, query):
         response = searcher(query=query)
-        await ctx.send_message(f'Google Response --> {response}')
+        await ctx.send(f'Google Response --> {response}')
 
 # Cog Setup Function
 def setup(bot):
