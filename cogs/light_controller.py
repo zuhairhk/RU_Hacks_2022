@@ -61,8 +61,4 @@ def colourSet(colour):
 # Light Mode Set Function
 def lightMode(mode):
     commands = {'commands': [{'code': 'work_mode', 'value': mode}] }
-<<<<<<< HEAD
     openapi.post(f'/v1.0/iot-03/devices/{LIGHTBULB_DEVICE_ID}/commands', commands)
-=======
-    openapi.post(f'/v1.0/iot-03/devices/{LIGHTBULB_DEVICE_ID}/commands', commands)
->>>>>>> main
