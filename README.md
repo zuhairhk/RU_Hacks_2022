@@ -5,7 +5,7 @@ Using primarily the *nextcord* API as well as others for the various features, t
 
 ## **Light Controller**
 
-Any *Tuya* smart light device can be controlled over Discord with Digitized Daniel using *slash commands*.
+With the help of the *TuyaIoT* API, any smart device can be controlled over Discord with Digitized Daniel using *slash commands*.
 ```
 /light
 ``` 
