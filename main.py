@@ -1,5 +1,4 @@
 # Import Statements
-from encodings import search_function
 import os
 from dotenv import load_dotenv
 import nextcord
