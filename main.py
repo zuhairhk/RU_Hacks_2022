@@ -1,11 +1,12 @@
 # Import Statements
+from encodings import search_function
 import os
 from dotenv import load_dotenv
 import nextcord
 from nextcord.ext import commands
 from nextcord.abc import GuildChannel
 from nextcord import Intents, Interaction, SlashOption, Member, ChannelType
-from cogs import light_controller
+from cogs import light_controller, search_func
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -46,6 +47,16 @@ async def colour_set(interaction: Interaction, colour):
 async def mode(interaction: Interaction, mode):
     light_controller.lightMode(mode=mode)
     await interaction.response.send_message(f"Light State Set To --> {mode}")
+
+# Google Search Slash Command
+@bot.slash_command(
+    name= "search",
+    description = "Enter Query",
+    guild_ids=[793978686822154240]
+)
+async def search(interaction: Interaction, query):
+    response = search_func.searcher(query=query)
+    await interaction.response.send_message(f"Google Response --> {response}")
 
 if __name__ == "__main__":
     for filename in os.listdir("./cogs"):
