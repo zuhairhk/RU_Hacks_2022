@@ -5,7 +5,7 @@ Using primarily the *nextcord* API as well as others for the various features, t
 
 ## **Light Controller**
 
-Any *Tuya* smart light device can be controlled over Discord with Digitized Daniel using *slash commands*.
+With the help of the *TuyaIoT* API, any smart device can be controlled over Discord with Digitized Daniel using *slash commands*.
 ```
 /light
 ``` 
@@ -33,6 +33,7 @@ With Digitized Daniel, Google searches are possible right in Discord!
 /search
 ```
 Is used to call the function, followed by whatever you'd like to search. Digitized Daniel will return the first result from Google. 
+<<<<<<< HEAD
 
 ## **Pomodoro Timer**
 Having trouble focusing when you're trying to study? The *Pomodoro Technique* is a method of staying focused by working for an interval of time, then taking a break for a smaller interval, and repeating this process. This increases productivity and prevents burnout.
@@ -46,3 +47,5 @@ Having trouble focusing when you're trying to study? The *Pomodoro Technique* is
  $time
  ```
  Displays how much time is left in the current study/break interval.
+=======
+>>>>>>> 3b1ed7d57775b123b9fb633ca49bc5966309e8fb
