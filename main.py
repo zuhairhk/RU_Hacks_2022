@@ -6,6 +6,7 @@ from nextcord.ext import commands
 from nextcord.abc import GuildChannel
 from nextcord import Intents, Interaction, SlashOption, Member, ChannelType
 from cogs import light_controller, search_func
+from cogs.pomodoro import PomodoroHandeler
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -17,6 +18,7 @@ bot = commands.Bot(command_prefix = "$", intents = intents)
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(activity=nextcord.Game(name="$help"))
     print('Ready!')
 
 # Light On/Off Slash Command
