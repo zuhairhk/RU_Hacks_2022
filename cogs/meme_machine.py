@@ -1,5 +1,7 @@
-import nextcord
+import nextcord, json, random
 from nextcord.ext import commands
+
+links = json.load(open("memes.json"))
 
 class Meme(commands.Cog):
 
@@ -14,6 +16,9 @@ class Meme(commands.Cog):
         
         if ("big shoe") in (message.content).lower(): # big shoe lmfao
             await message.channel.send("https://tenor.com/bC1Ll.gif")
+        
+        elif ("meme") in (message.content).lower():
+            await message.channel.send(random.choice(links))
         
 def setup(bot):
     bot.add_cog(Meme(bot))
