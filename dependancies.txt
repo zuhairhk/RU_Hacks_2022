@@ -1,8 +1,0 @@
-nextcord
-nextcord.ext
-nextcord.abc
-requests
-urllib
-requests_html
-TuyaOpenAPI
-os
