@@ -8,7 +8,7 @@ from nextcord import Intents, Interaction, SlashOption, Member, ChannelType
 from cogs import light_controller, search_func
 from cogs.pomodoro import PomodoroHandeler
 
-load_dotenv()
+#load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 # Bot Invite Link: https://discord.com/api/oauth2/authorize?client_id=972281781564887052&permissions=8&scope=bot%20applications.commands
@@ -25,7 +25,7 @@ async def on_ready():
 @bot.slash_command(
     name="light",
     description="State of Bulb (On/Off)",
-    guild_ids=[793978686822154240]
+    guild_ids=[852057773478641664, 793978686822154240, 972607047084429322]
 )
 async def State(interaction: Interaction, mode):
     light_controller.state(mode=mode)
@@ -35,7 +35,7 @@ async def State(interaction: Interaction, mode):
 @bot.slash_command(
     name= "colour_set",
     description = "Red, Orange, Yellow, Green, Cyan, Blue, Pink",
-    guild_ids=[793978686822154240]
+    guild_ids=[852057773478641664, 793978686822154240, 972607047084429322]
 )
 async def colour_set(interaction: Interaction, colour):
     light_controller.colourSet(colour=colour)
@@ -45,7 +45,7 @@ async def colour_set(interaction: Interaction, colour):
 @bot.slash_command(
     name= "mode",
     description = "White, Colour, Scence, Music",
-    guild_ids=[793978686822154240]
+    guild_ids=[852057773478641664, 793978686822154240, 972607047084429322]
 )
 async def mode(interaction: Interaction, mode):
     light_controller.lightMode(mode=mode)
@@ -55,7 +55,7 @@ async def mode(interaction: Interaction, mode):
 @bot.slash_command(
     name= "search",
     description = "Enter Query",
-    guild_ids=[793978686822154240]
+    guild_ids=[852057773478641664, 793978686822154240, 972607047084429322]
 )
 async def search(interaction: Interaction, query):
     response = search_func.searcher(query=query)
