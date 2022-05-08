@@ -1,5 +1,4 @@
 # Import Statements
-from http import server
 import os
 from dotenv import load_dotenv
 import nextcord
@@ -7,6 +6,7 @@ from nextcord.ext import commands
 from nextcord.abc import GuildChannel
 from nextcord import Intents, Interaction, SlashOption, Member, ChannelType
 from cogs import light_controller, search_func
+from cogs.meme_generator import memeGen
 from cogs.pomodoro import PomodoroHandeler
 
 #load_dotenv()
@@ -61,6 +61,7 @@ async def mode(interaction: Interaction, mode):
 async def search(interaction: Interaction, query):
     response = search_func.searcher(query=query)
     await interaction.response.send_message(f"Google Response --> {response}")
+
 
 if __name__ == "__main__":
     for filename in os.listdir("./cogs"):
