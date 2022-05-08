@@ -40,10 +40,10 @@ async def starter(ctx, study, pause):
         if ((studySecs/60) % 10 == 0):
             embed=nextcord.Embed(title='Pomo Notification', description=f'{studySecs/60} minutes left!', color=0xFF5733)
             await ctx.send(embed=embed)
-        if (int(studySecs/60) == 5):
+        if ((studySecs/60) == 5):
             embed=nextcord.Embed(title='Pomo Notification', description=f'Five minutes left!', color=0xFF5733)
             await ctx.send(embed=embed)
-        if (int(studySecs/60) == 1):
+        if ((studySecs/60) == 1):
             embed=nextcord.Embed(title='Pomo Notification', description=f'One minute left!', color=0xFF5733)
             await ctx.send(embed=embed)
         await asyncio.sleep(1)
@@ -53,10 +53,10 @@ async def starter(ctx, study, pause):
         await ctx.send(embed=embed)
         while breakSecs > 0:
             seconds = studySecs
-            if (int(studySecs/60) == 5):
+            if ((studySecs/60) == 5):
                 embed=nextcord.Embed(title='Pomo Notification', description=f'Five minutes left!', color=0xFF5733)
                 await ctx.send(embed=embed)
-            if (int(studySecs/60) == 1):
+            if ((studySecs/60) == 1):
                 embed=nextcord.Embed(title='Pomo Notification', description=f'One minute left!', color=0xFF5733)
                 await ctx.send(embed=embed)
             await asyncio.sleep(1)
