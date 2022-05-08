@@ -1,7 +1,6 @@
 # Import Statements
 import requests
-import urllib
-from requests_html import HTML, HTMLSession
+from requests_html import HTMLSession
 from nextcord.ext import commands
 from nextcord import Client
 

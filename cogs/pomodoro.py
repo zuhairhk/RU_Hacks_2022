@@ -1,9 +1,8 @@
 # Import Statements
-from tracemalloc import start
 from nextcord.ext import commands
 import nextcord
 from nextcord import Client
-import datetime, asyncio
+import asyncio
 
 
 class PomodoroHandeler(commands.Cog):
@@ -18,7 +17,6 @@ class PomodoroHandeler(commands.Cog):
     @commands.command(name='time', help='Checks Time')
     async def time(self, ctx: commands.Context):
         timeLeft = round(seconds / 60, 2)
-        #embed=nextcord.Embed(title="Time", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
         embed=nextcord.Embed(title='Pomo Notification', description=f'Time Left is --> {timeLeft} minute(s)', color=0xFF5733)
         await ctx.send(embed=embed)
 
@@ -27,6 +25,7 @@ class PomodoroHandeler(commands.Cog):
 def setup(bot):
     bot.add_cog(PomodoroHandeler(bot))
 
+# Starts Pomodoro Timer
 async def starter(ctx, study, pause):
     embed=nextcord.Embed(title='Pomo Notification', description=f'Focus set for --> {study} minute(s)\nBreak set for --> {pause} minute(s)', color=0xFF5733)
     await ctx.send(embed=embed)

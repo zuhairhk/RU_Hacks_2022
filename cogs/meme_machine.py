@@ -19,6 +19,7 @@ class Meme(commands.Cog):
         
         elif ("meme") in (message.content).lower(): # Sends random meme from list in .json file
             await message.channel.send(random.choice(links["memes"]))
-        
+
+# Cog Setup Function
 def setup(bot):
     bot.add_cog(Meme(bot))

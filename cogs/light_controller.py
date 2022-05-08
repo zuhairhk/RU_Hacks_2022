@@ -14,6 +14,7 @@ LIGHTBULB_DEVICE_ID = os.environ['LIGHTBULB_DEVICE_ID']
 openapi = TuyaOpenAPI(API_ENDPOINT, ACCESS_ID, ACCESS_KEY)
 openapi.connect()
 
+
 class LightController(commands.Cog):
     
     def __init__(self, bot : Client):

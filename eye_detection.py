@@ -1,5 +1,4 @@
-#All the imports go here
-import numpy as np
+#Import Statements
 import cv2
 
 def main():
@@ -7,14 +6,14 @@ def main():
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     eye_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
-    #Variable store execution state
     first_read = True
 
     #Starting the video capture
     cap = cv2.VideoCapture(0)
     ret,img = cap.read()
 
-    counter = 0
+    counter = 0 # Counter to time how long eyes are closed for
+
     while(ret):
         ret,img = cap.read()
         #Coverting the recorded image to grayscale
@@ -28,7 +27,6 @@ def main():
             for (x,y,w,h) in faces:
                 img = cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
 
-                #roi_face is face which is input to eye classifier
                 roi_face = gray[y:y+h,x:x+w]
                 roi_face_clr = img[y:y+h,x:x+w]
                 eyes = eye_cascade.detectMultiScale(roi_face,1.3,5,minSize=(50,50))
@@ -52,7 +50,6 @@ def main():
                             cv2.destroyAllWindows()
                             return True
                             break
-                
         else:
             cv2.putText(img,"No face detected",(100,100),cv2.FONT_HERSHEY_PLAIN, 3, (0,255,0),2)
 

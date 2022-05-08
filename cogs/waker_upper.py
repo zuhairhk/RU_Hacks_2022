@@ -44,6 +44,7 @@ class WakerUpper(commands.Cog):
 def setup(bot):
     bot.add_cog(WakerUpper(bot))
 
+# Function that sets up alert mode (including light system + sound system)
 @commands.command()
 async def alerter(ctx):
     music = NextcordUtils.Music()

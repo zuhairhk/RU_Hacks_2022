@@ -1,6 +1,4 @@
 # Import Statments
-from cgitb import text
-from email.mime import image
 import nextcord
 from nextcord.ext import commands
 from nextcord import Client
@@ -23,6 +21,7 @@ class MemeGenerator(commands.Cog):
 def setup(bot):
     bot.add_cog(MemeGenerator(bot))
 
+# Meme Generating Function
 async def memeGen(ctx, image, topText, botText):
     # Load Image
     img = Image.open('./assets/images/' + image + '.jpeg')
