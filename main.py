@@ -1,4 +1,5 @@
 # Import Statements
+from http import server
 import os
 from dotenv import load_dotenv
 import nextcord
@@ -44,7 +45,7 @@ async def colour_set(interaction: Interaction, colour):
 # Light Mode Change Slash Command
 @bot.slash_command(
     name= "mode",
-    description = "White, Colour, Scence, Music",
+    description = "White, Colour, Scene, Music",
     guild_ids=[852057773478641664, 793978686822154240, 972607047084429322]
 )
 async def mode(interaction: Interaction, mode):

@@ -27,7 +27,7 @@ class LightController(commands.Cog):
     async def set_colour(self, ctx, colour):
         colourSet(colour=colour)
     
-    @commands.command(name='set_mode', help='Sets mode: White, Colour, Scence, Music')
+    @commands.command(name='set_mode', help='Sets mode: White, Colour, Scene, Music')
     async def set_mode(self, ctx, mode):
         colourSet(mode=mode)
 

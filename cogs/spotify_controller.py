@@ -7,7 +7,7 @@ class SpotifyController(commands.Cog):
     def __init__(self, bot : Client):
         self.bot = bot
 
-    @commands.command(name='play', help='Plays Music)')
+    @commands.command(name='play', help='Plays Music')
     async def play(self):
         pass
 
