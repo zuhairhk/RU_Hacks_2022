@@ -1,4 +1,4 @@
-import nextcord, json, random
+import json, random
 from nextcord.ext import commands
 
 links = json.load(open("memes.json"))
