@@ -47,7 +47,7 @@ With Digitized Daniel, Google searches are possible right in Discord!
 ```
 /search
 ```
-Call the function, followed by whatever you'd like to search. Digitized Daniel will return the first result from Google. 
+Call the function, followed by whatever you'd like to search. Digitized Daniel will scrape and return the first result from Google. 
 
 ## **Pomodoro Timer**
 Having trouble focusing when you're trying to study? The *Pomodoro Technique* is a method of staying focused by working for an interval of time, then taking a break for a smaller interval, and repeating this process. This increases productivity and prevents burnout.
