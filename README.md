@@ -83,6 +83,3 @@ Below are the available meme formats:
 
 ## **Meme Machine**
 Need a break? Looking for a laugh? Digitized Daniel has you covered, enter "***memes***" in Discord and get a random meme gif from the funniest assortment of memes on this Earth. 
-
-## **League of Legends Roast**
-lmao
