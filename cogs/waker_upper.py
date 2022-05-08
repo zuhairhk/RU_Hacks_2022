@@ -1,10 +1,10 @@
 # Import Statments
-from http import server
 from nextcord.ext import commands
 from nextcord import Client
 import NextcordUtils
 import asyncio
 import eye_detection
+import light_controller
 
 class WakerUpper(commands.Cog):
     
@@ -34,6 +34,7 @@ class WakerUpper(commands.Cog):
     async def alert(self, ctx):
         state = eye_detection.main()
         if state == True:
+            light_controller.lightMode('scene')
             await alerter(ctx)
         else:
             pass
