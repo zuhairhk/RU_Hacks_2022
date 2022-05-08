@@ -63,7 +63,19 @@ Having trouble focusing when you're trying to study? The *Pomodoro Technique* is
  Displays how much time is left in the current study/break interval.
 
 ## **Meme Generator**
-work in progress
+Feeling creative? Digitized Daniel lets you create your own memes in Discord! Choose from classic templates and set the top/bottom text with commands.
+```
+$create "x" "y" "z"
+```
+Creates a meme, where *x* is the meme format, *y* is the top text and *z* is the bottom text.
+
+Below are the available meme formats:
+
+*buzzwoody*: Buzz and Woody "everywhere" meme
+*whokilled*: Eric Andre "Who Killed Hannibal?" meme
+*drake*: Drake Hotline Bling meme
+*epichandshake*: Predator "epic handshake" meme
+*megamind*: Megamind peeking meme
 
 ## **Meme Machine**
 Need a break? Looking for a laugh? Digitized Daniel has you covered, enter "***memes***" in Discord and get a random meme gif from the funniest assortment of memes on this Earth. 
