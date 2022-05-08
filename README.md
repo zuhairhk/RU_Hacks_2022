@@ -72,9 +72,13 @@ Creates a meme, where *x* is the meme format, *y* is the top text and *z* is the
 Below are the available meme formats:
 
 *buzzwoody*: Buzz and Woody "everywhere" meme
+
 *whokilled*: Eric Andre "Who Killed Hannibal?" meme
+
 *drake*: Drake Hotline Bling meme
+
 *epichandshake*: Predator "epic handshake" meme
+
 *megamind*: Megamind peeking meme
 
 ## **Meme Machine**
