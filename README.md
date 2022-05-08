@@ -28,7 +28,7 @@ Toggle between different modes for the light which change the lights frequency a
 *Music*: Changes colour to synchronize with music playing
 
 ## **Eye Detection**
-Do you find yourself falling asleep behind your screen after working for long periods of time? Digitized Daniel can help! By using facial detection, the movement of your eyes can be tracked to determine if you are falling asleep. Digitized Daniel then alerts you using lights, audio clips, and sending a gif on discord. 
+Do you find yourself falling asleep behind your screen after working for long periods of time? Digitized Daniel can help! By using facial detection, the movement of your eyes can be tracked to determine if you are falling asleep. Digitized Daniel then alerts you using lights, audio clips, and sending a gif on Discord. 
 ```
 $alert
 ```
