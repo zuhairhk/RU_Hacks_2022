@@ -4,6 +4,7 @@ from nextcord.ext import commands
 from nextcord import Client
 import NextcordUtils
 import asyncio
+import eye_detection
 
 class WakerUpper(commands.Cog):
     
@@ -31,7 +32,11 @@ class WakerUpper(commands.Cog):
 
     @commands.command(name='alert', help='Activates Wake Up Scenario')
     async def alert(self, ctx):
-        await alerter(ctx)
+        state = eye_detection.main()
+        if state == True:
+            await alerter(ctx)
+        else:
+            pass
     
 
 # Cog Setup Function
