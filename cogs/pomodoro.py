@@ -1,8 +1,10 @@
 # Import Statements
 from tracemalloc import start
 from nextcord.ext import commands
+import nextcord
 from nextcord import Client
 import datetime, asyncio
+
 
 class PomodoroHandeler(commands.Cog):
     
@@ -16,7 +18,9 @@ class PomodoroHandeler(commands.Cog):
     @commands.command(name='time', help='Checks Time')
     async def time(self, ctx: commands.Context):
         timeLeft = round(seconds / 60, 2)
-        await ctx.send(f'Time Left is --> {timeLeft} minute(s)')
+        #embed=nextcord.Embed(title="Time", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
+        embed=nextcord.Embed(title='Pomo Notification', description=f'Time Left is --> {timeLeft} minute(s)', color=0xFF5733)
+        await ctx.send(embed=embed)
 
 
 # Cog Setup Function
@@ -24,7 +28,8 @@ def setup(bot):
     bot.add_cog(PomodoroHandeler(bot))
 
 async def starter(ctx, study, pause):
-    await ctx.send(f'Timer set for --> {study} minute(s)\nBreak set for --> {pause} minute(s)')
+    embed=nextcord.Embed(title='Pomo Notification', description=f'Focus set for --> {study} minute(s)\nBreak set for --> {pause} minute(s)', color=0xFF5733)
+    await ctx.send(embed=embed)
 
     global seconds, studySecs, breakSecs
     
@@ -34,22 +39,29 @@ async def starter(ctx, study, pause):
     while studySecs > 0:
         seconds = studySecs
         if ((studySecs/60) % 10 == 0):
-            await ctx.send(f'{studySecs/60} minutes left!')
+            embed=nextcord.Embed(title='Pomo Notification', description=f'{studySecs/60} minutes left!', color=0xFF5733)
+            await ctx.send(embed=embed)
         if (int(studySecs/60) == 5):
-            await ctx.send(f'Five minutes left!')
+            embed=nextcord.Embed(title='Pomo Notification', description=f'Five minutes left!', color=0xFF5733)
+            await ctx.send(embed=embed)
         if (int(studySecs/60) == 1):
-            await ctx.send(f'One minute left!')
+            embed=nextcord.Embed(title='Pomo Notification', description=f'One minute left!', color=0xFF5733)
+            await ctx.send(embed=embed)
         await asyncio.sleep(1)
         studySecs -= 1
     else:
-        await ctx.send(f'Break Time!')
+        embed=nextcord.Embed(title='Pomo Notification', description=f'Break Time!', color=0xFF5733)
+        await ctx.send(embed=embed)
         while breakSecs > 0:
             seconds = studySecs
             if (int(studySecs/60) == 5):
-                await ctx.send(f'Five minutes left!')
+                embed=nextcord.Embed(title='Pomo Notification', description=f'Five minutes left!', color=0xFF5733)
+                await ctx.send(embed=embed)
             if (int(studySecs/60) == 1):
-                await ctx.send(f'One minute left!')
+                embed=nextcord.Embed(title='Pomo Notification', description=f'One minute left!', color=0xFF5733)
+                await ctx.send(embed=embed)
             await asyncio.sleep(1)
             breakSecs -= 1
     
-    await ctx.send('Pomodoro Session Over!')
+    embed=nextcord.Embed(title='Pomo Notification', description='Pomodoro Session Over!', color=0xFF5733)
+    await ctx.send(embed=embed)
